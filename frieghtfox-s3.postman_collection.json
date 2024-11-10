@@ -1,0 +1,86 @@
+{
+	"info": {
+		"_postman_id": "ff09ec40-4fc8-490e-b2b5-779128cc45df",
+		"name": "frieghtfox-s3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33669743"
+	},
+	"item": [
+		{
+			"name": "upload",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "postman-cloud:///1ef2a31c-1e77-43f0-8931-15401002786b"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/s3/upload/bob",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"s3",
+						"upload",
+						"bob"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search items",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "postman-cloud:///1ef2a31c-1e77-43f0-8931-15401002786b"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/s3/search?userName=monu&searchTerm=photo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"s3",
+						"search"
+					],
+					"query": [
+						{
+							"key": "userName",
+							"value": "monu"
+						},
+						{
+							"key": "searchTerm",
+							"value": "photo"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
